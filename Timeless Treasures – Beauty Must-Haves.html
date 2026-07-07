@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)file:///Users/destineblane/Downloads/timeless-treasures.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeless Treasures – Beauty Must-Haves</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --white: #FFFFFF;
+            --black: #1A1A1A;
+            --gold: #D4A574;
+            --gradient-light: linear-gradient(135deg, #FFF5E6 0%, #FFE6F0 50%, #F5E6F5 100%);
+            --gradient-warm: linear-gradient(135deg, #FFE6D5 0%, #FFE6F0 50%, #F0D5FF 100%);
+            --gradient-soft: linear-gradient(135deg, #FFF9F0 0%, #FFE6F0 100%);
+            --text-dark: #1A1A1A;
+            --text-light: #666666;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background-color: var(--white);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        /* Utility */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-light);
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 165, 116, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-weight: 400;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14px 40px;
+            background: var(--black);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: var(--gold);
+            color: var(--black);
+            transform: translateY(-2px);
+        }
+
+        /* Author Section */
+        .author {
+            background: var(--white);
+            padding: 80px 0;
+        }
+
+        .author h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .author p {
+            font-size: 16px;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .author p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--gold);
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        /* Products Section */
+        .products {
+            background: var(--white);
+            padding: 100px 0;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 280px;
+            background: var(--gradient-warm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-info {
+            padding: 32px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-brand {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: var(--gold);
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .product-name {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.7;
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+
+
+
+        /* Featured Section */
+        .featured {
+            background: var(--gradient-soft);
+            border-radius: 24px;
+            padding: 80px;
+            margin: 100px 0;
+        }
+
+        .featured-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .featured-text h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .featured-text p {
+            font-size: 16px;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 400px;
+            background: var(--gradient-light);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .newsletter p {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 12px;
+            background: var(--gradient-soft);
+            padding: 8px;
+            border-radius: 50px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 14px 24px;
+            border: none;
+            background: transparent;
+            font-family: inherit;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        .newsletter-form input::placeholder {
+            color: var(--text-light);
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+        }
+
+        .newsletter-form button {
+            padding: 14px 32px;
+            background: var(--black);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--gold);
+            color: var(--black);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .hero {
+                padding: 80px 0;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .featured-text h2 {
+                font-size: 28px;
+            }
+
+            .featured-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .featured {
+                padding: 40px 24px;
+            }
+
+            .featured-image {
+                height: 300px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                border-radius: 16px;
+                gap: 0;
+            }
+
+            .newsletter-form input {
+                padding: 14px 20px;
+                border-radius: 16px;
+            }
+
+            .newsletter-form button {
+                border-radius: 16px;
+                width: 100%;
+            }
+
+            nav .container {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .hero::before {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .product-card,
+            .cta-button {
+                transition: none;
+            }
+
+            .product-card:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Timeless</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Timeless Treasures</h1>
+            <p>Beauty must-haves I'll pass down to my children</p>
+            <button class="cta-button" onclick="document.querySelector(&#39;.products&#39;).scrollIntoView({behavior: &#39;smooth&#39;})">Explore Products</button>
+        </div>
+    </section>
+
+    <!-- Author Section -->
+    <section class="author">
+        <div class="container">
+            <div class="author-wrapper">
+                <div class="author-text">
+                    <h2>A Little Note</h2>
+                    <p>This is my personal collection—products I genuinely love and use every single day. The ones I reach for without thinking, that make me feel like myself.</p>
+                    <p>I'm sharing these with you because I believe in passing down the things that matter. Not the trends, not what's popular this season, but the timeless pieces that bring real joy and have a place in my life year after year.</p>
+                    <p>Think of this as a letter to my future self, and to my children. A reminder of what's worth keeping, what's worth investing in, and what makes a simple routine feel like a small ritual of self-care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">The Collection</div>
+                <h2 class="section-title">The Essentials</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <div class="product-brand">Lancôme</div>
+                        <div class="product-name">Bi-Facil Cleanser</div>
+                        <div class="product-description">Gentle and effortless. It melts makeup away like magic, leaving skin clean and soft. I've loved this for years.</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <div class="product-brand">Luxury Brand</div>
+                        <div class="product-name">Rose Hip Serum</div>
+                        <div class="product-description">Light and nourishing, with the most beautiful rose scent. It makes my skin glow without feeling heavy. A morning ritual I adore.</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <div class="product-brand">Heritage</div>
+                        <div class="product-name">Gold-Flecked Moisturizer</div>
+                        <div class="product-description">Rich and luxurious. There's something special about applying a cream with 24k gold—it feels like a small indulgence every single day.</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <div class="product-brand">Signature Scent</div>
+                        <div class="product-name">Timeless Eau de Parfum</div>
+                        <div class="product-description">Warm vanilla, sandalwood, and rose. A scent that lingers beautifully and feels like home. I've worn this for so long it feels like part of me.</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <div class="product-brand">Skincare Essential</div>
+                        <div class="product-name">Silk Eye Cream</div>
+                        <div class="product-description">Delicate and soothing. I use it before bed and wake up to softer, brighter eyes. It's become my favorite quiet moment in my routine.</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <div class="product-info">
+                        <div class="product-brand">Lip Luxury</div>
+                        <div class="product-name">Velvet Lip Balm</div>
+                        <div class="product-description">Soft, moisturizing, and never chalky. Such a simple thing, but it makes such a difference. I keep one everywhere.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section>
+        <div class="container">
+            <div class="featured">
+                <div class="featured-content">
+                    <div class="featured-text">
+                        <h2>Why These Products Matter</h2>
+                        <p>True beauty staples aren't about chasing the latest trends. They're about finding products that genuinely improve your skin, make you feel good, and stand the test of time.</p>
+                        <p>I've tested countless products over the years, and these are the ones that earned a permanent spot in my routine. They're effective, they're elegant, and they're worth every penny.</p>
+                    </div>
+                    <div class="featured-image"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p>New discoveries and timeless recommendations delivered to your inbox</p>
+            <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                <input type="email" placeholder="Your email" required="">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Timeless Treasures. Curated with care, built to last, passed forward.</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleNewsletter(e) {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            
+            let subscribers = JSON.parse(localStorage.getItem('timelessSubscribers') || '[]');
+            subscribers.push({
+                email: email,
+                timestamp: new Date().toISOString()
+            });
+            localStorage.setItem('timelessSubscribers', JSON.stringify(subscribers));
+
+            const button = e.target.querySelector('button');
+            const originalText = button.textContent;
+            button.textContent = '✓ Subscribed';
+            e.target.reset();
+
+            setTimeout(() => {
+                button.textContent = originalText;
+            }, 3000);
+        }
+    </script>
+
+
+</body></html>
